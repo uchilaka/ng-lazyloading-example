@@ -18,4 +18,4 @@ We will deep dive into the following Libraries / Features of Angular at scale:
 
 - Configuring `Markdownlint`
 - Configuring `TSLint`
-
+- Fix `tslint` codelyzer "custom rule directory" bug
