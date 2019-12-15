@@ -1,3 +1,4 @@
 rules:
   line-length: false
   no-trailing-punctuation: false
+  no-bare-urls: false
