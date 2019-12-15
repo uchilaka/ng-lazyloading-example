@@ -4,4 +4,5 @@
   },
   "editor.formatOnSave": true,
   // "typescript.preferences.quoteStyle": "single",
+  "terminal.integrated.fontSize": 14
 }

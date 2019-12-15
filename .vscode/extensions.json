@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "nrwl.angular-console",
+    "johnpapa.angular-essentials",
+    "johnpapa.angular2"
+  ]
+}
