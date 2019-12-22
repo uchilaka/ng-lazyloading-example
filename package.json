@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint ./src/**/*.ts -t verbose",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "npx jest",
     "build": "ng build --prod",
     "e2e": "ng e2e",
     "ng": "ng"
@@ -39,19 +39,46 @@
     "@angular/platform-server": "^8.0.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "^2.0.4",
+    "@types/jest": "^24.0.24",
     "@types/node": "~8.9.4",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "jest": "^24.9.0",
+    "jest-preset-angular": "^8.0.0",
     "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.2",
     "lodash": "^4.16.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup-jest.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html",
+      "clover"
+    ],
+    "coverageDirectory": "coverage/ng-lazyloading-example",
+    "coverageThreshold": {
+      "global": {
+        "statements": -50,
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      }
+    }
   },
   "repository": {}
 }

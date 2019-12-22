@@ -8,6 +8,10 @@ import { of } from 'rxjs';
 import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
 
+const mockHeroService = {
+  getHeroes: jest.fn()
+};
+
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
@@ -15,8 +19,9 @@ describe('DashboardComponent', () => {
   let getHeroesSpy;
 
   beforeEach(async(() => {
-    heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
-    getHeroesSpy = heroService.getHeroes.and.returnValue( of(HEROES) );
+    mockHeroService.getHeroes.mockReturnValue(of(HEROES));
+    // heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
+    // getHeroesSpy = heroService.getHeroes.and.returnValue( of(HEROES) );
     TestBed.configureTestingModule({
       declarations: [
         DashboardComponent,
@@ -26,17 +31,22 @@ describe('DashboardComponent', () => {
         RouterTestingModule.withRoutes([])
       ],
       providers: [
-        { provide: HeroService, useValue: heroService }
+        { provide: HeroService, useValue: mockHeroService }
       ]
     })
     .compileComponents();
 
+    heroService = TestBed.get(HeroService);
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it('should be created', () => {
@@ -48,8 +58,8 @@ describe('DashboardComponent', () => {
   });
 
   it('should call heroService', async(() => {
-    expect(getHeroesSpy.calls.any()).toBe(true);
-    }));
+    expect(mockHeroService.getHeroes).toHaveBeenCalledTimes(1);
+  }));
 
   it('should display 4 links', async(() => {
     expect(fixture.nativeElement.querySelectorAll('a').length).toEqual(4);

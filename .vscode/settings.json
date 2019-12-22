@@ -2,7 +2,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.tslint": true,
   },
-  "editor.formatOnSave": true,
-  // "typescript.preferences.quoteStyle": "single",
-  "terminal.integrated.fontSize": 14
+  "editor.formatOnSave": false,
+  "typescript.preferences.quoteStyle": "single",
+  "terminal.integrated.fontSize": 14,
+  "files.associations": {
+    "tslint.json": "jsonc"
+  }
 }

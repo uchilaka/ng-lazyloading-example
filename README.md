@@ -10,6 +10,7 @@ In this code example, we worked with the [Tour of Heroes](https://angular.io/gui
 
 We will deep dive into the following Libraries / Features of Angular at scale:
 
+- [x] Setting up Jest (to replace Jasmine + Karma): [Helpful Guide](https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/)
 - [ ] Routing and Navigation
 - [ ] Observables & RxJS
 - [ ] Dependency Injection

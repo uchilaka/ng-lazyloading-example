@@ -14,3 +14,7 @@ dist
 # Ignore lock files
 yarn.lock
 package-*.json
+
+# Misc
+**/**/.DS_Store
+coverage/
