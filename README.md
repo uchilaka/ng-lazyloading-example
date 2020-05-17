@@ -1,4 +1,10 @@
-# Lazy Loading Modules
+# Angular Examples
+
+## Questions Asked
+
+- **How can we implement component cacheing?** Review [this guide](https://angular.io/api/router/RouteReuseStrategy#shouldreuseroute) for documetation of a feature in the Angular API that can help with this (by comparing attributes of the current vs. future route)
+
+## Lazy Loading Modules
 
 In this code example, we worked with the [Tour of Heroes](https://angular.io/guide/http) project, and made the following modifications:
 
