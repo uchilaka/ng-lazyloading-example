@@ -17,7 +17,7 @@ In this code example, we worked with the [Tour of Heroes](https://angular.io/gui
 We will deep dive into the following Libraries / Features of Angular at scale:
 
 - [ ] Routing and Navigation
-- [ ] Observables & RxJS
+- [ ] Observables & RxJS << The next thing we will work on
 - [ ] Dependency Injection
 
 ## Future Topics

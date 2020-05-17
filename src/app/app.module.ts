@@ -14,6 +14,7 @@ import { HeroesComponent }      from './heroes/heroes.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { MessagesModule } from './messages/messages.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { HeroesModule } from './heroes/heroes.module';
   ],
   declarations: [
     AppComponent,
+    AdBannerComponent,
   ],
   bootstrap: [ AppComponent ]
 })
