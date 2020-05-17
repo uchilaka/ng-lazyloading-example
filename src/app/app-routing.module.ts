@@ -6,13 +6,6 @@ import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 import { AdBannerComponent } from "./ad-banner/ad-banner.component";
 
 const routes: Routes = [
-  // Ad banner, to display ONLY when user is at /heroes
-  // {
-  //   path: "heroes",
-  //   // pathMatch: "full",
-  //   outlet: "ad-banner",
-  //   component: AdBannerComponent,
-  // },
   { path: "", redirectTo: "/heroes", pathMatch: "full" },
   {
     path: "dashboard",
@@ -23,6 +16,7 @@ const routes: Routes = [
   {
     path: "heroes",
     children: [
+      // Ad banner, to display ONLY when user is at /heroes
       { path: "", outlet: "ad-banner", component: AdBannerComponent },
       { path: "", component: HeroesComponent },
     ],
